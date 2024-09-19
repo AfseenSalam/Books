@@ -1,0 +1,52 @@
+--CREATE DATABASE Books;
+--USE Books;
+
+--CREATE TABLE member(
+--id INT PRIMARY KEY,
+--[Name] NVARCHAR (40),
+--Card_number CHAR(10)
+--);
+
+--CREATE TABLE book(
+--Id INT PRIMARY KEY,
+--Title NVARCHAR(60),
+--Author NVARCHAR(60),
+--Checked_out_by_id INT FOREIGN KEY REFERENCES member(id)
+--);
+--INSERT INTO member (id, [Name], Card_number) VALUES
+--    (1, 'Annabelle Aster', '772-93-110'),
+--    (2, 'Boris Berceli', '000-00-000'),
+--    (3, 'Carter Corbin', '282-09-382');
+
+--INSERT INTO book (Id, Title, Author, Checked_out_by_id) VALUES
+--    (1, 'In Search of Lost Time', 'Marcel Proust', 1),
+--    (2, 'Ulysses', 'James Joyce', 1),                 
+--    (3, 'Don Quixote', 'Miguel de Cervantes', 3),     
+--    (4, 'Moby Dick', 'Herman Melville', NULL); 
+--UPDATE member 
+--SET Card_number = '357-15-964'
+--WHERE Id =2;
+--SELECT * FROM member;
+--DELETE FROM member
+--WHERE Id =2;
+--SELECT * FROM member;
+--SELECT * FROM member
+--WHERE Card_number = '772-93-110';
+--SELECT * FROM book
+--ORDER BY Title;
+--UPDATE book
+--SET Checked_out_by_id = 1
+--WHERE Title = 'Moby Dick';
+--SELECT * FROM book;
+--UPDATE book
+--SET Checked_out_by_id = null
+--WHERE Title = 'Ulysses';
+--SELECT * FROM book
+--LEFT JOIN member ON book.Checked_out_by_id = member.Id;
+--SELECT book.Title,member.[Name] From book
+--JOIN member ON book.Checked_out_by_id = member.Id
+--WHERE member.[Name]='Annabelle Aster';
+
+--SELECT member.[Name],member.Card_number FROM member
+--JOIN book ON Book.Checked_out_by_id= member.Id
+--WHERE book.Author ='Herman Melville';
